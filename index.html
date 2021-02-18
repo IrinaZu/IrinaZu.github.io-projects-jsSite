@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+ 
+    <header>
+        <ul class="nav">
+            <li id="nameBtn"><a href="#">Имя</a></li>
+            <li id="yBtn"><a href="#">Треугольник</a></li>
+            <li id="secondBtn"><a href="#">Строки</a></li>
+            <li id="thirdBtn"><a href="#">Max и Min</a></li>
+            <li id="fourthBtn"><a href="#">Тест</a></li>
+            <li id="fifthBtn"><a href="#">Таймер</a></li>
+            <li id="sixthBtn"><a href="#">Заставка</a></li>
+            <div id="blocklocal">
+            <div id="nearLoc">Пользователь: </div>
+            <div id="localStorage"></div>
+          </div>
+        </ul>
+        
+    </header>
+      <div class="firstBlock">
+          <div class="content">
+            <h2>JavaScript</h2>
+            <p id="text">Является полноценным динамическим языком программирования, который применяется к HTML документу, и может обеспечить динамическую интерактивность на веб-сайтах. С точки зрения веб-разработки, без знаний этой технологии невозможно заниматься созданием современных интерактивных сайтов.</p>
+          </div>
+        </div>
+
+        <div class="secondBlock">
+          <div class="content">
+            <p>Любое действие пользователя на странице порождает событие. Программирование на JavaScript — это обработка событий.
+              <br>
+               Программист пишет обработчик только для тех событий, на которые стоит реагировать. Вот как выглядит обычный сценарий:
+              <br>
+              <br>
+            Пользователь что-то сделал на странице -> В браузере сработало событие -> Запустился JavaScript-код, который назначен на событие -> JavaScript изменил что-то на странице.</p>
+          <h2>Как работает JavaScript?</h2>
+        </div>
+      </div>
+
+        <div class="firstBlock">
+          <div class="content">
+            <h2>Чем хорош JavaScript?</h2>
+            <p>JavaScript полностью интегрирован с HTML, он способен как угодно менять веб-страницу. В ответ на событие программист может:
+              <br>
+              <br>
+              -на лету вставить в HTML-код любые теги;
+              <br>
+              <br>
+              -задать внешний вид элементов через класс и атрибуты HTML;
+              <br>
+              <br>
+              -переместить любой элемент;
+              <br>
+              <br>
+              -запросить у пользователя данные;
+              <br>
+              <br>
+              -отправить запрос на сервер (технология AJAX).
+              <br>
+            </p>
+        </div>
+    </div>
+
+    <div class="secondBlock">
+        <div class="content">        
+            <p>Классический JavaScript — это язык программирования для интернета, он бессилен за пределами браузера. С помощью JavaScript нельзя запустить программу на компьютере или записать файл в нужную папку.</p>
+          <h2>Какие существуют ограничения?</h2>
+        </div>
+      </div>
+
+    <div id="namepopup" class="popup">
+      <div class="popup-content">
+        <div class="popup-header">
+          <h2>Введите ваше имя</h2>
+          <span class="nameClose">&times;</span>
+        </div>
+        <div class="popup-body">
+        <p>После ввода имени загружается приветсвенное окно alert, после перезагрузки страницы с помощью localStorage происходит запоминание введенного имени и отобоажение его на странице. </p>
+        <input type="text" id="Name">
+        <button id="say">Отправить</button>
+        </div>
+      </div>
+    </div>
+
+    <div id="mypopup" class="popup">
+        <div class="popup-content">
+          <div class="popup-header">
+            <h2>Введите основание и высоту треугольника</h2>
+            <span class="close">&times;</span>
+          </div>
+          <div class="popup-body">
+            <input type="text" id="base">
+            <input type="text" id="height">
+            <button id="count">Рассчитать</button>
+            <p>Площадь:</p>
+            <div id="square"></div>
+            <p>Для нахождения площади и ее выведения используется метод "getElementById", собирающий данные из "input. Рассчет происходит по нажатию клавиши "рассчитать", на эту клавишу привязан обработчик событий по клику "addEventListener" </p>
+          </div>
+        </div>
+      </div>
+
+      <div id="secondpopup" class="popup">
+        <div class="popup-content">
+          <div class="popup-header">
+            <h2>Введите две строки</h2>
+            <span class="secondClose">&times;</span>
+          </div>
+          <div class="popup-body">
+            <input type="text" id="first">
+            <input type="text" id="second">
+            <button id="compare">Рассчитать</button>
+            <p>Итог:</p>
+            <div id="outecome"></div>
+            <p>Для того, чтобы понять равные строки или нет используется метод "getElementById", собирающий данные из "input. Рассчет происходит по нажатию клавиши "рассчитать", на эту клавишу привязан обработчик событий по клику "addEventListener". Для самого вычисления длины каждой строки используется метод "length" и сравнение через условный оператор if\else</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="thirdpopup" class="popup">
+        <div class="popup-content">
+          <div class="popup-header">
+            <h2>Введите 5 чисел через пробел</h2>
+            <span class="thirdClose">&times;</span>
+          </div>
+          <div class="popup-body">
+            
+            <input type="text" id="a">
+            <button id="maxMin" >Рассчитать</button> 
+          <div class="MM">
+            <p>Max и Min:</p>
+            
+            <div id="max"></div>
+            <div id="min"></div>
+          </div>
+            <p id="textSize">Для определения максмального и минимального чисел используется массив строк, который впоследствии приводится к массиву чисел через "Parseint". Для самого определения max и min используются методы "Math.max.apply" и "Math.min.apply"</p>
+          </div>
+        </div>
+      </div>
+
+      <div id="sixthpopup" class="picturepopup">
+        <div class="picturepopup-content">
+          <div class="picturepopup-header">
+            <!--<img src="Image\fog.jpg" alt="fog" id="foggy">-->
+            
+          </div>
+          <div class="picturepopup-body">
+            <div id="date"></div>
+            <p id="us">USER:</p>
+            <div id="user"></div>
+          </div>
+        </div>
+      </div>
+      <div id="resJS"></div>
+
+      <div id="fourthpopup" class="popup">
+        <div class="popup-content">
+          <div class="popup-header">
+            <p id="textSize">Тест сделан на основе инпутов типа: radiobox и text. Обработка ответов происходит по событию при нажатии на кнопку "Отправить." В зависимости от ответа(его сравнения в коде javaScript) ответы с помощью смены стилей CSS, подсвечиваются зеленым или красным.</p>
+            
+            <span class="fourthСlose">&times;</span>
+          </div>
+          <div class="popup-body">
+            <h2>Ответьте на вопросы, приведенные ниже</h2>
+            <form name="demo">
+              <fieldset>
+                <div class="first">
+                <p>DOM-это</p>
+                  <input type="radio" value="0" name="q1" id="z">
+                  <label  for="z">здание.</label>
+                  <br>
+                  <input type="radio" value="1" name="q1">
+                  <label  for="z">представление HTML-документа в виде дерева тегов.</label>
+                  <br>
+                  <input type="radio" value="0" name="q1">
+                  <label  for="z"> домашнее задание.</label>
+                </div>
+              </fieldset>
+      
+              <fieldset>
+                <div class="first">
+                  <p>HTML-теги нужны для</p>
+                  <input type="radio" value="0" name="q2">
+                  <label >для того, чтобы переписываться с друзьями</label>
+                  <br>
+                  <input type="radio" value="0" name="q2">
+                  <label >нет такого понятия</label>
+                  <br>
+                  <input type="radio" value="1" name="q2">
+                  <label >для разграничения начала и конца элементов в разметке.</label>
+                </div>
+              </fieldset>
+              
+              <fieldset>
+                <div class="first">
+                <p>JavaScript</p>
+              
+                <input type="radio" value="1" name="q3">
+                <label>слабо типизирован</label>
+                <br>
+ 
+                <input type="radio" value="0" name="q3">
+                <label>не типизирован</label>
+                <br>
+
+                <input type="radio" value="0" name="q3">
+                <label>сильно типизирован</label>
+              </div>
+            </fieldset>
+      
+            <fieldset>
+              <div class="first">
+              <p>Alert-это</p>
+ 
+                <input type="radio" value="1" name="q4">
+                <label>функция, выводящая окно с сообщением.</label>
+                <br>
+
+                <input type="radio" value="0" name="q4">
+                <label>переменная.</label>
+                <br>
+
+                <input type="radio" value="0" name="q4">
+                <label>сайт.</label>
+              </div>
+            </fieldset>
+      
+            <fieldset>
+              <div class="first">
+              <p>EventTarget.addEventListener()-это</p>
+ 
+                <input type="radio" value="0" name="q5">
+                <label>функция, выводящая окно с сообщением.</label>
+                <br>
+
+                <input type="radio" value="1" name="q5">
+                <label>метод, регистрирует определенный обработчик события, вызванного на EventTarget.</label>
+                <br>
+
+                <input type="radio" value="0" name="q5">
+                <label>такого метода не существует.</label>
+              </div>
+            </fieldset>
+          </div>
+         
+      
+            <div id="test">
+              <p>Разработка на скольких основных китах держится разработка сайта? Напишите цифру</p>
+              <input  >
+      
+              <p>"Тип Bollean принимает значения:false и ..."</p>
+              <input  >
+      
+              <p> Для ...(этой переменной) не существует блочной области видимости</p>
+              <input  >
+            
+              <p>Как называется событие которое происходит, когда кликнули на элемент левой кнопкой мыши (на устройствах с сенсорными экранами оно происходит при касании).</p>
+              <input >
+      
+              <p>Cтандартизированный язык разметки документов во Всемирной паутине. </p>
+              <input >
+              <br>
+              <br>
+              <div class="button">
+              <p><input type="reset" value="Сбросить" id="breakdown"></p>
+            </form>
+              <button id="otpr">Отправить</button>
+            </div>
+              <div class="end">
+                <p>Набрано </p>
+                  <div id="RESULT"><p></p></div>
+                <p> из 10.</p>
+            </div>
+          </div>
+          
+          </div>
+        </div>
+      </div>
+
+      <div id="fifthpopup" class="popup">
+        <div class="popup-content">
+          <div class="popup-header">
+            <p id="textSize">С помощью "innerHTML" тэгам, с определенными id, присваивается значение, получаемое с помощью многократного прибавления к переменным обозначенным как "sec", "min", "hour". Постоянное прибавление происходит с помощью "setTimeout", которое начинается при клике на кнопку start(то есть отслеживается событие).</p>
+            <span class="fifthClose">&times;</span>
+          </div>
+          <div class="popup-body">
+            <h2>Секундомер</h2>
+            <div class="act">
+              <input type="button" onclick="Timer.start()" value="Запустить" id="start">
+              <input type="button" onclick="Timer.stop()" value="Остановить" id="stop">
+              <input type="button" onclick="Timer.startAgain()" value="Сбросить" id="startAg">
+          </div>
+          <div class="Counting">
+                <p id="addHour"> 0</p> 
+                <p id="addMinute"> 0</p> 
+                <p id="addSecond"> 0</p>
+          </div>
+          </div>
+        </div>
+      </div>
+
+     <div class="D">
+      <div id="div1"></div>
+      <div id="div2"></div>
+      <div id="div3"></div>
+      <div id="div4"></div>
+      <div id="div5"></div>
+    </div>
+
+    <footer>
+    </footer>
+    <script type="text/javascript" src="JS\script.js"></script>
+    <script type="text/javascript" src="JS\scriptpop.js"></script>
+    <script type="text/javascript" src="JS\scriptTime.js"></script>
+</body>
+</html>
