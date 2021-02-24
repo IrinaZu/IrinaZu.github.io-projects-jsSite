@@ -154,7 +154,7 @@ document.getElementById('maxMin').addEventListener('click', search);
 //4
 
 let count=0;
-
+let flag="yes";
 function R(){
     document.getElementById('otpr').disabled = true;
 
@@ -194,6 +194,8 @@ button.addEventListener('click',function(){
                 if(input.value==rightAnswers[i]){
                     input.classList.add('correct');
                     ++count;
+                }else if(input.value.length==0){
+                    flag="no";
                 }
                 else{
                     input.classList.add('incorrect');
@@ -201,8 +203,10 @@ button.addEventListener('click',function(){
                 ++i;
             }
         }
-        
+        if(flag=="yes"){
             document.getElementById('RESULT').innerHTML = count; 
+        }
+            
         
         
 
