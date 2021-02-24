@@ -3,16 +3,35 @@ function hi(){
     var input=document.getElementById('Name').value;
     //var html ="Привет "+input;
     //document.getElementById('result').innerHTML = html;  
-    alert("Привет "+input+"!");
-    localStorage.setItem('1',input);
+    console.log(input);
+    if(input.length!=0){
+        if(document.getElementById('Name').validity.patternMismatch==false){
+            alert("Привет "+input+"!");
+            localStorage.setItem('1',input);
+        }
+        
+    }
+    
+    
+    //var testForm = document.getElementById('nameForm'); 
+    //testForm.onsubmit = function(event) { event.preventDefault();} 
 }
+
 document.getElementById('say').addEventListener('click', hi);
 //1
 function calculate(){
     var x1=document.getElementById('base').value;
     var x2=document.getElementById('height').value;
     var html =x1*x2*0.5;
-    document.getElementById('square').innerHTML = html;  
+    if(x1.length!=0&&x2.length!=0){
+        if(document.getElementById('base').validity.patternMismatch==false&&document.getElementById('height').validity.patternMismatch==false){
+            document.getElementById('square').innerHTML = html; 
+        }
+         
+    }
+    
+    var testForm = document.getElementById('treugolnik'); 
+    testForm.onsubmit = function(event) { event.preventDefault();} 
 
 }
 document.getElementById('count').addEventListener('click', calculate);
@@ -24,8 +43,15 @@ function comparator(){
       var html =true;  
     }
     else var html =false; 
+    if(x1.length!=0&&x2.length!=0){
+        if(document.getElementById('first').validity.patternMismatch==false&&document.getElementById('second').validity.patternMismatch==false){
+            document.getElementById('outecome').innerHTML = html;  
+        }
+        
+    }
    
-    document.getElementById('outecome').innerHTML = html;  
+    var testForm = document.getElementById('stringForm'); 
+    testForm.onsubmit = function(event) { event.preventDefault();} 
 } 
 document.getElementById('compare').addEventListener('click', comparator);
 
@@ -39,17 +65,24 @@ function search(){
         array.push(i);
     }
     
-    console.log(array);
+    
     for (let index = 0; index < 5; index++) {
         array[index]=Number.parseInt(array[index]);
         
     }
-    console.log(array[3]);
+
     var max_of_array = Math.max.apply(Math, array);
     var min_of_array = Math.min.apply(Math, array);
-    document.getElementById('max').innerHTML = max_of_array;  
-    document.getElementById('min').innerHTML = min_of_array;  
+   
+        if(document.getElementById('a').validity.patternMismatch==false){
+            document.getElementById('max').innerHTML = max_of_array;  
+            document.getElementById('min').innerHTML = min_of_array; 
+        }
+ 
     
+
+    var testForm = document.getElementById('maxminForm'); 
+    testForm.onsubmit = function(event) { event.preventDefault();} 
 
     
 } 
@@ -119,8 +152,12 @@ document.getElementById('maxMin').addEventListener('click', search);
 
 //test
 //4
+
 let count=0;
+
 function R(){
+    document.getElementById('otpr').disabled = true;
+
     const form = document.forms.demo;
     const checked = form.querySelector('input[name=q1]:checked');
     const checked_2 = form.querySelector('input[name=q2]:checked');
@@ -146,25 +183,38 @@ document.getElementById('otpr').addEventListener('click', R);
 
 
 let button=document.querySelector('#otpr');
+
 button.addEventListener('click',function(){
+   
     let inputs=document.querySelectorAll('#test input');
         let rightAnswers=["3","true","var","click","html"];
         let i=0;
         for(let input of inputs){
-            if(input.value==rightAnswers[i]){
-                input.classList.add('correct');
-                ++count;
-            }else{
-                input.classList.add('incorrect');
+            if(input.validity.patternMismatch==false){
+                if(input.value==rightAnswers[i]){
+                    input.classList.add('correct');
+                    ++count;
+                }
+                else{
+                    input.classList.add('incorrect');
+                }
+                ++i;
             }
-            ++i;
         }
+        
+            document.getElementById('RESULT').innerHTML = count; 
+        
+        
 
-        document.getElementById('RESULT').innerHTML = count; 
+        var testForm = document.getElementById('testForm'); 
+        testForm.onsubmit = function(event) { event.preventDefault();} 
 });
 
 let reset=document.querySelector('#breakdown');
+
 reset.addEventListener('click',function(){
+    window.location.reload();
+    document.getElementById('otpr').disabled = false;
     for(let y=0;y<5;y++){
             var razpricee = document.getElementsByClassName('first')[y];
             razpricee.style.color="#000000";
@@ -175,7 +225,11 @@ reset.addEventListener('click',function(){
         for(let input of inputs){
                 input.classList.add('simple');
         }
+    
     document.getElementById('RESULT').innerHTML = " ";
+
+
+
 });
 
 //5

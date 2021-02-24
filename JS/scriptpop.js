@@ -6,12 +6,17 @@ let npopup=document.getElementById('namepopup'),
  	};
  	npopupClose.onclick=function(){
  		npopup.style.display='none';
+		 window.location.reload();
  	};
  	window.onclick=function(e){
  		if(e.target==npopup){
  			npopup.style.display="none";
  		}
  	};
+
+
+
+
 
 let popup=document.getElementById('mypopup'),
  	popupTogle=document.getElementById('yBtn'),
@@ -21,12 +26,16 @@ let popup=document.getElementById('mypopup'),
  	};
  	popupClose.onclick=function(){
  		popup.style.display='none';
+		 window.location.reload();
  	};
  	window.onclick=function(e){
  		if(e.target==popup){
  			popup.style.display="none";
  		}
  	};
+
+
+
 
 let spopup=document.getElementById('secondpopup'),
  	spopupTogle=document.getElementById('secondBtn'),
@@ -36,6 +45,7 @@ let spopup=document.getElementById('secondpopup'),
  	};
  	spopupClose.onclick=function(){
  		spopup.style.display='none';
+		 window.location.reload();
  	};
  	window.onclick=function(e){
  		if(e.target==spopup){
@@ -51,6 +61,7 @@ let tpopup=document.getElementById('thirdpopup'),
  	};
  	tpopupClose.onclick=function(){
  		tpopup.style.display='none';
+		 window.location.reload();
  	};
  	window.onclick=function(e){
  		if(e.target==tpopup){
@@ -66,6 +77,7 @@ let tpopup=document.getElementById('thirdpopup'),
  	};
  	fpopupClose.onclick=function(){
  		fpopup.style.display='none';
+		 window.location.reload();
  	};
  	window.onclick=function(e){
  		if(e.target==fpopup){
@@ -81,6 +93,7 @@ let tpopup=document.getElementById('thirdpopup'),
  	};
  	fifpopupClose.onclick=function(){
 		fifpopup.style.display='none';
+		window.location.reload();
  	};
  	window.onclick=function(e){
  		if(e.target==fifpopup){

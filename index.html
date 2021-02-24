@@ -84,8 +84,10 @@
         </div>
         <div class="popup-body">
         <p>После ввода имени загружается приветсвенное окно alert, после перезагрузки страницы с помощью localStorage происходит запоминание введенного имени и отобоажение его на странице. </p>
-        <input type="text" id="Name">
+        <form action="" id="nameForm">
+        <input type="text" id="Name" required pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Введите имя">
         <button id="say">Отправить</button>
+        </form>
         </div>
       </div>
     </div>
@@ -97,9 +99,12 @@
             <span class="close">&times;</span>
           </div>
           <div class="popup-body">
-            <input type="text" id="base">
-            <input type="text" id="height">
-            <button id="count">Рассчитать</button>
+            <form action="" id="treugolnik">
+            <input type="text" id="base" required pattern="^[ 0-9]+$" placeholder="Введите число">
+            <input type="text" id="height" required pattern="^[ 0-9]+$" placeholder="Введите число"> 
+          
+           <button id="count">Рассчитать</button>
+          </form >
             <p>Площадь:</p>
             <div id="square"></div>
             <p>Для нахождения площади и ее выведения используется метод "getElementById", собирающий данные из "input. Рассчет происходит по нажатию клавиши "рассчитать", на эту клавишу привязан обработчик событий по клику "addEventListener" </p>
@@ -114,9 +119,11 @@
             <span class="secondClose">&times;</span>
           </div>
           <div class="popup-body">
-            <input type="text" id="first">
-            <input type="text" id="second">
+            <form action="" id="stringForm">
+            <input type="text" id="first" required pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Введите строку">
+            <input type="text" id="second" required pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Введите строку">
             <button id="compare">Рассчитать</button>
+          </form>
             <p>Итог:</p>
             <div id="outecome"></div>
             <p>Для того, чтобы понять равные строки или нет используется метод "getElementById", собирающий данные из "input. Рассчет происходит по нажатию клавиши "рассчитать", на эту клавишу привязан обработчик событий по клику "addEventListener". Для самого вычисления длины каждой строки используется метод "length" и сравнение через условный оператор if\else</p>
@@ -131,9 +138,10 @@
             <span class="thirdClose">&times;</span>
           </div>
           <div class="popup-body">
-            
-            <input type="text" id="a">
+            <form action="" id="maxminForm">
+            <input type="text" id="a" required pattern="^[ 0-9]+$" placeholder="Введите числа">
             <button id="maxMin" >Рассчитать</button> 
+          </form>
           <div class="MM">
             <p>Max и Min:</p>
             
@@ -169,17 +177,17 @@
           </div>
           <div class="popup-body">
             <h2>Ответьте на вопросы, приведенные ниже</h2>
-            <form name="demo">
+            <form name="demo" id="testForm">
               <fieldset>
                 <div class="first">
                 <p>DOM-это</p>
-                  <input type="radio" value="0" name="q1" id="z">
+                  <input type="radio" value="0" name="q1" id="z" required>
                   <label  for="z">здание.</label>
                   <br>
-                  <input type="radio" value="1" name="q1">
+                  <input type="radio" value="1" name="q1" required>
                   <label  for="z">представление HTML-документа в виде дерева тегов.</label>
                   <br>
-                  <input type="radio" value="0" name="q1">
+                  <input type="radio" value="0" name="q1" required>
                   <label  for="z"> домашнее задание.</label>
                 </div>
               </fieldset>
@@ -187,13 +195,13 @@
               <fieldset>
                 <div class="first">
                   <p>HTML-теги нужны для</p>
-                  <input type="radio" value="0" name="q2">
+                  <input type="radio" value="0" name="q2" required>
                   <label >для того, чтобы переписываться с друзьями</label>
                   <br>
-                  <input type="radio" value="0" name="q2">
+                  <input type="radio" value="0" name="q2" required>
                   <label >нет такого понятия</label>
                   <br>
-                  <input type="radio" value="1" name="q2">
+                  <input type="radio" value="1" name="q2" required>
                   <label >для разграничения начала и конца элементов в разметке.</label>
                 </div>
               </fieldset>
@@ -202,15 +210,15 @@
                 <div class="first">
                 <p>JavaScript</p>
               
-                <input type="radio" value="1" name="q3">
+                <input type="radio" value="1" name="q3" required>
                 <label>слабо типизирован</label>
                 <br>
  
-                <input type="radio" value="0" name="q3">
+                <input type="radio" value="0" name="q3" required>
                 <label>не типизирован</label>
                 <br>
 
-                <input type="radio" value="0" name="q3">
+                <input type="radio" value="0" name="q3" required>
                 <label>сильно типизирован</label>
               </div>
             </fieldset>
@@ -219,32 +227,32 @@
               <div class="first">
               <p>Alert-это</p>
  
-                <input type="radio" value="1" name="q4">
+                <input type="radio" value="1" name="q4" required>
                 <label>функция, выводящая окно с сообщением.</label>
                 <br>
 
-                <input type="radio" value="0" name="q4">
+                <input type="radio" value="0" name="q4" required>
                 <label>переменная.</label>
                 <br>
 
-                <input type="radio" value="0" name="q4">
+                <input type="radio" value="0" name="q4" required>
                 <label>сайт.</label>
               </div>
             </fieldset>
       
-            <fieldset>
+            <fieldset >
               <div class="first">
               <p>EventTarget.addEventListener()-это</p>
  
-                <input type="radio" value="0" name="q5">
+                <input type="radio" value="0" name="q5" required>
                 <label>функция, выводящая окно с сообщением.</label>
                 <br>
 
-                <input type="radio" value="1" name="q5">
+                <input type="radio" value="1" name="q5" required>
                 <label>метод, регистрирует определенный обработчик события, вызванного на EventTarget.</label>
                 <br>
 
-                <input type="radio" value="0" name="q5">
+                <input type="radio" value="0" name="q5" required>
                 <label>такого метода не существует.</label>
               </div>
             </fieldset>
@@ -253,25 +261,26 @@
       
             <div id="test">
               <p>Разработка на скольких основных китах держится разработка сайта? Напишите цифру</p>
-              <input  >
+              <input type="text" required pattern="^[ 0-9]+$" placeholder="Введите ответ">
       
               <p>"Тип Bollean принимает значения:false и ..."</p>
-              <input  >
+              <input type="text" required pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Введите ответ">
       
               <p> Для ...(этой переменной) не существует блочной области видимости</p>
-              <input  >
+              <input type="text" required pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Введите ответ">
             
               <p>Как называется событие которое происходит, когда кликнули на элемент левой кнопкой мыши (на устройствах с сенсорными экранами оно происходит при касании).</p>
-              <input >
+              <input type="text" required pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Введите ответ">
       
               <p>Cтандартизированный язык разметки документов во Всемирной паутине. </p>
-              <input >
+              <input type="text" required pattern="^[A-Za-zА-Яа-яЁё]+$" placeholder="Введите ответ">
               <br>
               <br>
               <div class="button">
               <p><input type="reset" value="Сбросить" id="breakdown"></p>
-            </form>
+            
               <button id="otpr">Отправить</button>
+              </form>
             </div>
               <div class="end">
                 <p>Набрано </p>
@@ -298,9 +307,20 @@
               <input type="button" onclick="Timer.startAgain()" value="Сбросить" id="startAg">
           </div>
           <div class="Counting">
+            <div class="num">
+                <p id="addHour2"> 0</p> 
                 <p id="addHour"> 0</p> 
+            </div>
+            <p>:</p>
+            <div class="num">
+                <p id="addMinute2"> 0</p> 
                 <p id="addMinute"> 0</p> 
+            </div>
+            <p>:</p>
+            <div class="num">
+                <p id="addSecond2"> 0</p>
                 <p id="addSecond"> 0</p>
+              </div>
           </div>
           </div>
         </div>
